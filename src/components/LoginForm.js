@@ -75,12 +75,13 @@ const styles = {
 };
 
 const mapStateToProps = state => {
+    const { email, password, user, error, loading } = state.auth;
     return {
-        email: state.auth.email,
-        password: state.auth.password,
-        user: state.auth.user,
-        error: state.auth.error,
-        loading: state.auth.loading
+        email,
+        password,
+        user,
+        error,
+        loading
     };
 };
 
